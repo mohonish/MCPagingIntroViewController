@@ -1,15 +1,15 @@
 {
   "name": "MCPagingIntroViewController",
   "version": "0.1.0",
-  "summary": "A short description of MCPagingIntroViewController.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/MCPagingIntroViewController",
+  "summary": "Animated paging intro view controller for app intro screens",
+  "description": "Animated paging intro viewcontroller for iOS app intro screens built on Swift",
+  "homepage": "https://github.com/mohonish/MCPagingIntroViewController",
   "license": "MIT",
   "authors": {
     "Mohonish Chakraborty": "mohonish.c@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/MCPagingIntroViewController.git",
+    "git": "https://github.com/mohonish/MCPagingIntroViewController.git",
     "tag": "0.1.0"
   },
   "platforms": {

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03563CAAC21F8ED68C4565851191E164 /* MCPagingIntroViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F189D6AE67E39D93889C4C640F2317 /* MCPagingIntroViewController-dummy.m */; };
 		258DA38225D752192BECBA6F9CAFDC05 /* Pods-MCPagingIntroViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F130053470493D33508D6FE967525091 /* Pods-MCPagingIntroViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30D5C46BBD0F07D6FF64EDB88F9F1770 /* Pods-MCPagingIntroViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD929991F96B62E674C07AFF8A3CD4A2 /* Pods-MCPagingIntroViewController_Example-dummy.m */; };
 		46E7BA70E68787484F12927FAE60D53E /* MCPagingIntroViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D07161A588BA8664744F2FBEB67D994A /* MCPagingIntroViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		698D120CAC2CD8FA41DADDFA75A28183 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D779E2682B68F00C10A6EC6C55604 /* ReplaceMe.swift */; };
 		781099E1A43DA4B98B5B5B139439B2DA /* Pods-MCPagingIntroViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0036E94EA1B21AE446090C13E320CF2F /* Pods-MCPagingIntroViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FD75C5243A5DF2461C39388B3918235 /* MCPagingIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A6F044F5DCF2427BAE77E7969712F /* MCPagingIntroViewController.swift */; };
 		85C9503C7967E4BE8A28B20A6BFF17B6 /* MCPagingIntroViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E6A40ECACB5AEECE4BD4007F95D1FEE2 /* MCPagingIntroViewController.bundle */; };
 		9BB4FD5C9E3DB3716C4923167895BE20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		C254C39DEFAFA130E245C3CCE9E0FF27 /* MCPagingIntroViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F189D6AE67E39D93889C4C640F2317 /* MCPagingIntroViewController-dummy.m */; };
 		C2A1BB628205AB8D63D618863A893361 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		E5562D33D91D03B12CDF0BEED8DCE15E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		F4F1582A45C42C6FB79EC9A9E4400CDD /* Pods-MCPagingIntroViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE5FB4171706F3F16928A36DB316CCC /* Pods-MCPagingIntroViewController_Tests-dummy.m */; };
@@ -48,6 +48,7 @@
 		0036E94EA1B21AE446090C13E320CF2F /* Pods-MCPagingIntroViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MCPagingIntroViewController_Example-umbrella.h"; sourceTree = "<group>"; };
 		0FC35D4B60FD73DA82F7C3310DF39B83 /* Pods-MCPagingIntroViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MCPagingIntroViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		15F1CFC5B49ABE920586D3F0D794E644 /* Pods-MCPagingIntroViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MCPagingIntroViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		246A6F044F5DCF2427BAE77E7969712F /* MCPagingIntroViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MCPagingIntroViewController.swift; sourceTree = "<group>"; };
 		2A039A9083F6AB1874A96DCE481DBA4B /* Pods-MCPagingIntroViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MCPagingIntroViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		38BFBE991FE5274E9F38B0E1D79C7F2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -65,7 +66,6 @@
 		A526B31AD404975B65F44A1F41C8B29A /* Pods-MCPagingIntroViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MCPagingIntroViewController_Example.modulemap"; sourceTree = "<group>"; };
 		A6726C562F3B6DC812F2A831A2E3B389 /* Pods_MCPagingIntroViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCPagingIntroViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F719D7033790EC268FB2431A9D1594 /* Pods-MCPagingIntroViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MCPagingIntroViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B93D779E2682B68F00C10A6EC6C55604 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C25708AD7D04D6589FD71C26C3538518 /* Pods-MCPagingIntroViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MCPagingIntroViewController_Tests-resources.sh"; sourceTree = "<group>"; };
 		CD929991F96B62E674C07AFF8A3CD4A2 /* Pods-MCPagingIntroViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MCPagingIntroViewController_Example-dummy.m"; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		10198D06F66DB6ECBCD1E53921AAC92D /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				E70DBCC4B32F3BB5712DE56B7048A59A /* Classes */,
+				702D0008572A2F2E373B31F4504A5329 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -171,6 +171,14 @@
 			path = "Target Support Files/Pods-MCPagingIntroViewController_Example";
 			sourceTree = "<group>";
 		};
+		702D0008572A2F2E373B31F4504A5329 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				246A6F044F5DCF2427BAE77E7969712F /* MCPagingIntroViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -204,14 +212,6 @@
 				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		E70DBCC4B32F3BB5712DE56B7048A59A /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B93D779E2682B68F00C10A6EC6C55604 /* ReplaceMe.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		E7A2C5A9834687373A88F6DA6A3BDC95 /* Pods-MCPagingIntroViewController_Tests */ = {
@@ -280,7 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF1251FC7C60DEA9D2BC0339C1DD5850 /* Build configuration list for PBXNativeTarget "MCPagingIntroViewController" */;
 			buildPhases = (
-				552BE5F4520850EBF1B4E37E0502A66F /* Sources */,
+				45CBE316B22E9006482A9F8AE7A57CDA /* Sources */,
 				C22AEF3F6588B3004B7E0D522E358C63 /* Frameworks */,
 				B94C2ABB4750117BD87C943532A9FD52 /* Resources */,
 				D075E0EEA004D809F0B0E12911468959 /* Headers */,
@@ -412,12 +412,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		552BE5F4520850EBF1B4E37E0502A66F /* Sources */ = {
+		45CBE316B22E9006482A9F8AE7A57CDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C254C39DEFAFA130E245C3CCE9E0FF27 /* MCPagingIntroViewController-dummy.m in Sources */,
-				698D120CAC2CD8FA41DADDFA75A28183 /* ReplaceMe.swift in Sources */,
+				03563CAAC21F8ED68C4565851191E164 /* MCPagingIntroViewController-dummy.m in Sources */,
+				7FD75C5243A5DF2461C39388B3918235 /* MCPagingIntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

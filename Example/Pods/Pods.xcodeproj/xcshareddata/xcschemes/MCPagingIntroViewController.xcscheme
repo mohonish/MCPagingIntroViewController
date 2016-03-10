@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0C549586A6D1A21D18F55A00'
+               BlueprintIdentifier = 'A8A9C43DAB90F573D606CDFD'
                BlueprintName = 'MCPagingIntroViewController'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'MCPagingIntroViewController.framework'>

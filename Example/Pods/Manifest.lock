@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  MCPagingIntroViewController: 984660f7b4b8f738884e9fb13b0282efd35198eb
+  MCPagingIntroViewController: 0e6c8acc3551ce0faed7d1265f9924b9e1c3855f
 
 COCOAPODS: 0.39.0

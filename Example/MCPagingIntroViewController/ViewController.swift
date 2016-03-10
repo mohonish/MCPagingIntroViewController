@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import MCPagingIntroViewController
 
-class ViewController: UIViewController {
+class ViewController: MCPagingIntroViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.contentView.backgroundColor = UIColor.yellowColor()
     }
 
     override func didReceiveMemoryWarning() {
