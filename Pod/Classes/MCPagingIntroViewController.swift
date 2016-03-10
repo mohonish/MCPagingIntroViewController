@@ -14,6 +14,14 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
     
     public let contentView = UIView()
     
+    public var backgroundImageView = UIImageView()
+    
+    private var currentPageNumber = 0
+    
+    public func backgroundImages() -> [UIImage]? {
+        return nil
+    }
+    
     public func numberOfPages() -> Int {
         return 2
     }
@@ -27,6 +35,12 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
         setupConstraints()
     }
+    
+    override public func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setBackgroundImage()
+    }
 
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,7 +49,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
     
     // MARK: - UI Setup
     
-    func setupScrollView() {
+    private func setupScrollView() {
         
         scrollView.delegate = self
         scrollView.pagingEnabled = true
@@ -44,16 +58,28 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
         self.view.addSubview(scrollView)
         scrollView.frame = self.view.bounds
-        
+        scrollView.backgroundColor = UIColor.clearColor()
     }
     
-    func setupContentView() {
+    private func setupContentView() {
         
         scrollView.addSubview(contentView)
+        contentView.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = UIColor.whiteColor()
+        
+        setupBackgroundImageView()
         
     }
     
-    func setupConstraints() {
+    private func setupBackgroundImageView() {
+        
+        self.backgroundImageView = UIImageView(frame: self.view.frame)
+        self.backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        self.view.addSubview(backgroundImageView)
+        
+    }
+    
+    private func setupConstraints() {
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -73,6 +99,54 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
         NSLayoutConstraint.activateConstraints([contentViewWidth, contentViewHeight])
         
+    }
+    
+    // MARK: - Data Setters
+    
+    private func setBackgroundImage() {
+        
+        let currentPage = getPageNumber()
+        
+        if let images = backgroundImages() {
+            if currentPage < images.count {
+                print("currentPage: \(currentPage), imageCount: \(images.count)")
+                let currentImage = images[Int(currentPage)]
+                
+                UIView.transitionWithView(self.backgroundImageView, duration: 0.4, options: .TransitionCrossDissolve, animations: {
+                    self.backgroundImageView.image = currentImage
+                }, completion: nil)
+                
+            }
+        }
+        
+    }
+    
+    // MARK: - UIScrollView Delegate
+    
+    public func scrollViewDidScroll(scrollView: UIScrollView) {
+        if getPageNumberChanged() {
+            setBackgroundImage()
+        }
+    }
+    
+    // MARK: - Status Bar
+    
+    public override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    // MARK: - Utilities
+    
+    private func getPageNumber() -> Int {
+        return Int(abs(ceil(scrollView.contentOffset.x / scrollView.frame.size.width)))
+    }
+    
+    private func getPageNumberChanged() -> Bool {
+        if currentPageNumber != getPageNumber() {
+            currentPageNumber = getPageNumber()
+            return true
+        }
+        return false
     }
 
     /*

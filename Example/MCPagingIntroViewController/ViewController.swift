@@ -14,12 +14,19 @@ class ViewController: MCPagingIntroViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.contentView.backgroundColor = UIColor.yellowColor()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - MCPaginIntroViewController Customization overrides
+    
+    override func backgroundImages() -> [UIImage]? {
+        let img1 = UIImage(named: "stockImage1.jpg")!
+        let img2 = UIImage(named: "stockImage2.jpg")!
+        return [img1, img2]
     }
 
 }
