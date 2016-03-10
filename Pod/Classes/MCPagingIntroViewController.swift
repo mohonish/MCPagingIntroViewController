@@ -18,22 +18,29 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
     
     private var currentPageNumber = 0
     
-    public func backgroundImages() -> [UIImage]? {
-        return nil
-    }
+    // MARK: - Data Setters
     
     public func numberOfPages() -> Int {
         return 2
     }
     
+    public func backgroundImages() -> [UIImage]? {
+        return nil
+    }
+    
+    public func labelTexts() -> [String]? {
+        return nil
+    }
+    
+    // MARK: - View Lifecycle
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
 
         setupScrollView()
-        
         setupContentView()
-        
         setupConstraints()
+        setupLoginView()
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -75,7 +82,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
         self.backgroundImageView = UIImageView(frame: self.view.frame)
         self.backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        self.view.addSubview(backgroundImageView)
+        self.view.insertSubview(backgroundImageView, belowSubview: self.scrollView)
         
     }
     
@@ -101,7 +108,24 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    // MARK: - Data Setters
+    func setupLoginView() {
+        
+        let loginFrame = CGRectMake(0, (self.view.frame.height - 60), self.view.frame.width, 60)
+        let loginView = UIView(frame: loginFrame)
+        loginView.backgroundColor = UIColor.blackColor()
+        self.view.insertSubview(loginView, aboveSubview: self.scrollView)
+        
+        let startButton = UIButton(frame: CGRectMake((loginView.frame.width / 5), (loginView.frame.height / 3), (loginView.frame.width / 1.5), (loginView.frame.height / 2)))
+        startButton.setTitle("Get Started", forState: .Normal)
+        startButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        startButton.layer.cornerRadius = 2.0
+        startButton.clipsToBounds = true
+        startButton.backgroundColor = UIColor.whiteColor()
+        loginView.addSubview(startButton)
+        
+    }
+    
+    // MARK: - Background Image
     
     private func setBackgroundImage() {
         

@@ -28,6 +28,13 @@ class ViewController: MCPagingIntroViewController {
         let img2 = UIImage(named: "stockImage2.jpg")!
         return [img1, img2]
     }
+    
+    override func labelTexts() -> [String]? {
+        return [
+            "This is the first page",
+            "Here comes the second page"
+        ]
+    }
 
 }
 
