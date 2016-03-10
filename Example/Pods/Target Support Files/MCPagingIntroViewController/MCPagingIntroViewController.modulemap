@@ -1,0 +1,6 @@
+framework module MCPagingIntroViewController {
+  umbrella header "MCPagingIntroViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

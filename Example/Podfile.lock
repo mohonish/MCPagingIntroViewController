@@ -1,0 +1,14 @@
+PODS:
+  - MCPagingIntroViewController (0.1.0)
+
+DEPENDENCIES:
+  - MCPagingIntroViewController (from `../`)
+
+EXTERNAL SOURCES:
+  MCPagingIntroViewController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MCPagingIntroViewController: 984660f7b4b8f738884e9fb13b0282efd35198eb
+
+COCOAPODS: 0.39.0

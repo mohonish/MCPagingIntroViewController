@@ -9,22 +9,21 @@
 Pod::Spec.new do |s|
   s.name             = "MCPagingIntroViewController"
   s.version          = "0.1.0"
-  s.summary          = "A short description of MCPagingIntroViewController."
+  s.summary          = "Animated paging intro view controller for app intro screens"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
+  s.description      = "Animated paging intro viewcontroller for iOS app intro screens built on Swift"
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/MCPagingIntroViewController"
+  s.homepage         = "https://github.com/mohonish/MCPagingIntroViewController"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Mohonish Chakraborty" => "mohonish.c@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/MCPagingIntroViewController.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/mohonish/MCPagingIntroViewController.git", :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/mohonishc'
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true

@@ -1,0 +1,6 @@
+framework module Pods_MCPagingIntroViewController_Tests {
+  umbrella header "Pods-MCPagingIntroViewController_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

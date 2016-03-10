@@ -1,0 +1,25 @@
+{
+  "name": "MCPagingIntroViewController",
+  "version": "0.1.0",
+  "summary": "A short description of MCPagingIntroViewController.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/MCPagingIntroViewController",
+  "license": "MIT",
+  "authors": {
+    "Mohonish Chakraborty": "mohonish.c@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/MCPagingIntroViewController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "MCPagingIntroViewController": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
