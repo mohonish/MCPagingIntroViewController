@@ -45,7 +45,8 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         setupContentView()
         setupConstraints()
         setupLoginView()
-        setupPaginControl()
+        setupPagingControl()
+        setupLabels()
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -134,12 +135,44 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    func setupPaginControl() {
+    func setupPagingControl() {
         
         self.pageControl.frame = CGRectMake(0, self.loginView.frame.origin.y - 30, self.view.frame.width, 20)
         self.view.insertSubview(pageControl, aboveSubview: self.scrollView)
         pageControl.numberOfPages = self.numberOfPages()
         
+    }
+    
+    func setupLabels() {
+        
+        if let labels = labelTexts() {
+            var page = 0
+            for label in labels {
+                setLabelOnPage(label, page: page)
+                ++page
+            }
+        }
+        
+    }
+    
+    func setLabelOnPage(labelText: String, page: Int) {
+        
+        let labelFrame = CGRectMake(getLabelX(page), self.loginView.frame.origin.y - 100, self.view.frame.width, 40)
+        let label = UILabel(frame: labelFrame)
+        label.font = UIFont.systemFontOfSize(15)
+        label.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        label.numberOfLines = 3
+        label.textAlignment = .Center
+        label.textColor = UIColor.whiteColor()
+        
+        label.text = labelText
+        
+        self.contentView.addSubview(label)
+        
+    }
+    
+    func getLabelX(page: Int) -> CGFloat {
+        return CGFloat(page*Int(self.view.frame.width))
     }
     
     // MARK: - Background Image
