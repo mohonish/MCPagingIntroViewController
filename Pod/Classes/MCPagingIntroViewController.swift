@@ -233,7 +233,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
     
     private func setupLogoImageView() {
         
-        
+        //TODO
         
     }
     
