@@ -35,6 +35,12 @@ class ViewController: MCPagingIntroViewController {
             "Here comes the second page"
         ]
     }
+    
+    override func detailImages() -> [UIImage]? {
+        let img1 = UIImage(named: "stockImage1.jpg")!
+        let img2 = UIImage(named: "stockImage2.jpg")!
+        return [img1, img2]
+    }
 
 }
 

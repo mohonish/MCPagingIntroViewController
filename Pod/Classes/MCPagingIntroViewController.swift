@@ -32,6 +32,10 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         return nil
     }
     
+    public func detailImages() -> [UIImage]? {
+        return nil
+    }
+    
     public func labelTexts() -> [String]? {
         return nil
     }
@@ -47,6 +51,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         setupLoginView()
         setupPagingControl()
         setupLabels()
+        setupDetailImageViews()
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -101,7 +106,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         gradient.frame = gradientView.bounds
         gradient.colors = [UIColor(netHex: 0x45ace1).CGColor, UIColor(netHex: 0x1DE9B6).CGColor]
         gradientView.layer.insertSublayer(gradient, atIndex: 0)
-        gradientView.alpha = 0.3
+        gradientView.alpha = 0.2
         
         self.view.insertSubview(gradientView, aboveSubview: self.backgroundImageView)
         
@@ -133,7 +138,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
         let loginFrame = CGRectMake(0, (self.view.frame.height - 60), self.view.frame.width, 60)
         loginView = UIView(frame: loginFrame)
-        loginView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        loginView.backgroundColor = UIColor(white: 0, alpha: 0.2)
         self.view.insertSubview(loginView, aboveSubview: self.scrollView)
         
         let startButton = UIButton(frame: CGRectMake((loginView.frame.width / 5), (loginView.frame.height / 3), (loginView.frame.width / 1.5), (loginView.frame.height / 2)))
@@ -157,6 +162,8 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         pageControl.numberOfPages = self.numberOfPages()
         
     }
+    
+    // MARK: - Detail Labels
     
     private func setupLabels() {
         
@@ -189,6 +196,39 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
     private func getLabelX(page: Int) -> CGFloat {
         return CGFloat(page*Int(self.view.frame.width))
     }
+    
+    // MARK: - Detail ImageViews
+    
+    private func setupDetailImageViews() {
+        
+        if let images = detailImages() {
+            var page = 0
+            for image in images {
+                setDetailImageOnPage(image, page: page)
+                ++page
+            }
+        }
+        
+    }
+    
+    private func setDetailImageOnPage(image: UIImage, page: Int) {
+        
+        let imageFrame = CGRectMake(getDetailImageX(page), 150, ((self.loginView.frame.origin.y - 100) - 200), ((self.loginView.frame.origin.y - 100) - 200))
+        let imageView = UIImageView(frame: imageFrame)
+        imageView.image = image
+        imageView.contentMode = .ScaleAspectFill
+        imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.clipsToBounds = true
+        imageView.layer.borderColor = UIColor.whiteColor().CGColor
+        imageView.layer.borderWidth = 2.0
+        
+        self.contentView.addSubview(imageView)
+    }
+    
+    private func getDetailImageX(page: Int) -> CGFloat {
+        return CGFloat((page*Int(self.view.frame.width)) + 50)
+    }
+    
     
     // MARK: - Background Image
     
