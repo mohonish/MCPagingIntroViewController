@@ -16,6 +16,10 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
     
     public var backgroundImageView = UIImageView()
     
+    public var pageControl = UIPageControl()
+    
+    public var loginView = UIView()
+    
     private var currentPageNumber = 0
     
     // MARK: - Data Setters
@@ -41,6 +45,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         setupContentView()
         setupConstraints()
         setupLoginView()
+        setupPaginControl()
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -111,17 +116,29 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
     func setupLoginView() {
         
         let loginFrame = CGRectMake(0, (self.view.frame.height - 60), self.view.frame.width, 60)
-        let loginView = UIView(frame: loginFrame)
-        loginView.backgroundColor = UIColor.blackColor()
+        loginView = UIView(frame: loginFrame)
+        loginView.backgroundColor = UIColor(white: 0, alpha: 0.5)
         self.view.insertSubview(loginView, aboveSubview: self.scrollView)
         
         let startButton = UIButton(frame: CGRectMake((loginView.frame.width / 5), (loginView.frame.height / 3), (loginView.frame.width / 1.5), (loginView.frame.height / 2)))
         startButton.setTitle("Get Started", forState: .Normal)
-        startButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        startButton.layer.cornerRadius = 2.0
+        startButton.titleLabel?.font = UIFont.systemFontOfSize(15)
+        startButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        startButton.layer.cornerRadius = startButton.frame.height / 2
         startButton.clipsToBounds = true
-        startButton.backgroundColor = UIColor.whiteColor()
+        startButton.backgroundColor = UIColor.clearColor()
+        startButton.alpha = 0.8
+        startButton.layer.borderColor = UIColor.whiteColor().CGColor
+        startButton.layer.borderWidth = 1
         loginView.addSubview(startButton)
+        
+    }
+    
+    func setupPaginControl() {
+        
+        self.pageControl.frame = CGRectMake(0, self.loginView.frame.origin.y - 30, self.view.frame.width, 20)
+        self.view.insertSubview(pageControl, aboveSubview: self.scrollView)
+        pageControl.numberOfPages = self.numberOfPages()
         
     }
     
@@ -168,6 +185,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
     private func getPageNumberChanged() -> Bool {
         if currentPageNumber != getPageNumber() {
             currentPageNumber = getPageNumber()
+            pageControl.currentPage = getPageNumber()
             return true
         }
         return false
