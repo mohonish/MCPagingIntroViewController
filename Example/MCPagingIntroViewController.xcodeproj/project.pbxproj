@@ -14,8 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		AA824A361C92D9F7001BA37C /* stockimage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA824A351C92D9F7001BA37C /* stockimage1.jpg */; };
 		AAB8D1141C917E7000CDBE96 /* stockImage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAB8D1121C917E7000CDBE96 /* stockImage2.jpg */; };
-		AAB8D1151C917E7000CDBE96 /* stockImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAB8D1131C917E7000CDBE96 /* stockImage1.jpg */; };
 		BD0507E611943A0DEE0EA863 /* Pods_MCPagingIntroViewController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15136F14F573D914D1C6B87A /* Pods_MCPagingIntroViewController_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +46,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		952830124DCE22F964F1E69C /* Pods-MCPagingIntroViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCPagingIntroViewController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCPagingIntroViewController_Example/Pods-MCPagingIntroViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A5251D49D222D612BADF6F99 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		AA824A351C92D9F7001BA37C /* stockimage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stockimage1.jpg; sourceTree = "<group>"; };
 		AAB8D1121C917E7000CDBE96 /* stockImage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stockImage2.jpg; sourceTree = "<group>"; };
-		AAB8D1131C917E7000CDBE96 /* stockImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stockImage1.jpg; sourceTree = "<group>"; };
 		D82758F4F0B81AD84E5D76D4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		ED41735C426E2B8E728EB4F6 /* MCPagingIntroViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MCPagingIntroViewController.podspec; path = ../MCPagingIntroViewController.podspec; sourceTree = "<group>"; };
 		FBF811C6CF3A6327C1273699 /* Pods-MCPagingIntroViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCPagingIntroViewController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCPagingIntroViewController_Example/Pods-MCPagingIntroViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				AAB8D1121C917E7000CDBE96 /* stockImage2.jpg */,
-				AAB8D1131C917E7000CDBE96 /* stockImage1.jpg */,
+				AA824A351C92D9F7001BA37C /* stockimage1.jpg */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for MCPagingIntroViewController";
@@ -252,10 +252,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA824A361C92D9F7001BA37C /* stockimage1.jpg in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				AAB8D1151C917E7000CDBE96 /* stockImage1.jpg in Resources */,
 				AAB8D1141C917E7000CDBE96 /* stockImage2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

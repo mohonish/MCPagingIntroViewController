@@ -99,9 +99,9 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         let gradientView = UIView(frame: self.backgroundImageView.bounds)
         let gradient = CAGradientLayer()
         gradient.frame = gradientView.bounds
-        gradient.colors = [UIColor.blueColor().CGColor, UIColor.greenColor().CGColor]
+        gradient.colors = [UIColor(netHex: 0x45ace1).CGColor, UIColor(netHex: 0x1DE9B6).CGColor]
         gradientView.layer.insertSublayer(gradient, atIndex: 0)
-        gradientView.alpha = 0.2
+        gradientView.alpha = 0.3
         
         self.view.insertSubview(gradientView, aboveSubview: self.backgroundImageView)
         
