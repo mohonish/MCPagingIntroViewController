@@ -90,6 +90,21 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         self.backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
         self.view.insertSubview(backgroundImageView, belowSubview: self.scrollView)
         
+        setupBackgroundImageGradient()
+        
+    }
+    
+    private func setupBackgroundImageGradient() {
+        
+        let gradientView = UIView(frame: self.backgroundImageView.bounds)
+        let gradient = CAGradientLayer()
+        gradient.frame = gradientView.bounds
+        gradient.colors = [UIColor.blueColor().CGColor, UIColor.greenColor().CGColor]
+        gradientView.layer.insertSublayer(gradient, atIndex: 0)
+        gradientView.alpha = 0.2
+        
+        self.view.insertSubview(gradientView, aboveSubview: self.backgroundImageView)
+        
     }
     
     private func setupConstraints() {
@@ -114,7 +129,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    func setupLoginView() {
+    private func setupLoginView() {
         
         let loginFrame = CGRectMake(0, (self.view.frame.height - 60), self.view.frame.width, 60)
         loginView = UIView(frame: loginFrame)
@@ -135,7 +150,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    func setupPagingControl() {
+    private func setupPagingControl() {
         
         self.pageControl.frame = CGRectMake(0, self.loginView.frame.origin.y - 30, self.view.frame.width, 20)
         self.view.insertSubview(pageControl, aboveSubview: self.scrollView)
@@ -143,7 +158,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    func setupLabels() {
+    private func setupLabels() {
         
         if let labels = labelTexts() {
             var page = 0
@@ -155,7 +170,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    func setLabelOnPage(labelText: String, page: Int) {
+    private func setLabelOnPage(labelText: String, page: Int) {
         
         let labelFrame = CGRectMake(getLabelX(page), self.loginView.frame.origin.y - 100, self.view.frame.width, 40)
         let label = UILabel(frame: labelFrame)
@@ -171,7 +186,7 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    func getLabelX(page: Int) -> CGFloat {
+    private func getLabelX(page: Int) -> CGFloat {
         return CGFloat(page*Int(self.view.frame.width))
     }
     
