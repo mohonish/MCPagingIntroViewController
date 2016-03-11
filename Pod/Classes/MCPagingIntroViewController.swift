@@ -229,6 +229,13 @@ public class MCPagingIntroViewController: UIViewController, UIScrollViewDelegate
         return CGFloat((page*Int(self.view.frame.width)) + 50)
     }
     
+    // MARK: - Setup Logo ImageView
+    
+    private func setupLogoImageView() {
+        
+        
+        
+    }
     
     // MARK: - Background Image
     
